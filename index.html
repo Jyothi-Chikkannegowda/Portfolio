@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jyothi | Full Stack Developer</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="desktop-nav">
+    <div class="logo">Jyothi C</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PROFILE -->
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assests/Profile-pic.png" alt="Jyothi profile picture" class="profile-img"/>
+    </div>
+
+    <div class="section__text">
+      <p class="section_text_p1">Hello, I'm</p>
+      <h1 class="title">Jyothi C</h1>
+      <p class="section_text_p2">Aspiring Python Full Stack Developer | MCA Student</p>
+
+      <div class="btn-container">
+        <button class="btn" onclick="window.open('./assests/Resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-outline" onclick="location.href='#contact'">
+          Contact Me
+        </button>
+      </div>
+
+      <div id="socials-container">
+        <img src="./assests/linkedin.png" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/jyothi-c-568036369/'"/>
+        <img src="./assests/github-light_.png" class="icon"
+          onclick="location.href='https://github.com/Jyothi-Chikkannegowda'"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+ <section id="about">
+  <h2>About Me</h2>
+
+  <p>
+    I am a dedicated MCA student with a strong foundation in Python and Full Stack Web Development. 
+    As a fresher, I bring enthusiasm, adaptability, and a strong willingness to learn and grow in a professional environment.
+  </p>
+
+  <p>
+    I have hands-on experience in Python, HTML, CSS, JavaScript, and MySQL through academic and personal projects. 
+    I focus on writing clean, efficient code and building responsive, user-friendly applications.
+  </p>
+
+  <p>
+    I am actively seeking an opportunity where I can contribute to real-world projects, 
+    enhance my technical expertise, and grow as a valuable software developer.
+  </p>
+</section>
+
+  <!-- SKILLS -->
+  <section id="experience">
+    <h1 class="section-title">Technical Skills</h1>
+
+    <div class="card-container">
+      <div class="glass-card">
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+
+      <div class="glass-card">
+        <h3>Backend</h3>
+        <p>Python, Java, C</p>
+      </div>
+
+      <div class="glass-card">
+        <h3>Database</h3>
+        <p>MySQL</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h1 class="section-title">Projects</h1>
+
+    <div class="card-container">
+
+      <div class="glass-card project-card">
+        <h3>Art & Craft Management System</h3>
+        <p>Built using HTML, CSS, JavaScript & MySQL with admin dashboard.</p>
+        <button class="btn"
+          onclick="location.href='https://github.com/Jyothi-Chikkannegowda/Art-and-craft-management-system'">
+          GitHub
+        </button>
+      </div>
+
+      <div class="glass-card project-card">
+        <h3>Complaint Submission Portal</h3>
+        <p>Full stack complaint management system with user authentication.</p>
+        <button class="btn"
+          onclick="location.href='https://github.com/Jyothi-Chikkannegowda/Complaint-submission-portal'">
+          GitHub
+        </button>
+      </div>
+
+      <div class="glass-card project-card">
+        <h3>Portfolio Website</h3>
+        <p>Responsive modern personal portfolio with glassmorphism design.</p>
+        <button class="btn"
+          onclick="location.href='https://github.com/Jyothi-Chikkannegowda/FUTURE_FS_01'">
+          GitHub
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+<section id="contact">
+  <h1 class="section-title">Contact Me</h1>
+
+  <div class="glass-card contact-card">
+    <p>
+      Email:
+      <a href="mailto:jyothicgowda.mys@gmail.com">
+        jyothicgowda.mys@gmail.com
+      </a>
+    </p>
+
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/jyothi-c-568036369/" target="_blank">
+        Jyothi C
+      </a>
+    </p>
+  </div>
+</section>
+
+
+  <footer>
+    <p>© 2026 Jyothi C | Full Stack Developer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
