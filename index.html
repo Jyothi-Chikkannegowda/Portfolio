@@ -3,157 +3,314 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jyothi | Full Stack Developer</title>
-
+  <title>Jyothi C | Python Full Stack Developer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
+  <!-- BACKGROUND ORBS -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
   <!-- NAVBAR -->
-  <nav id="desktop-nav">
+  <nav id="navbar">
     <div class="logo">Jyothi C</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#experience">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- PROFILE -->
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="#about" onclick="closeMobileNav()">About</a></li>
+      <li><a href="#education" onclick="closeMobileNav()">Education</a></li>
+      <li><a href="#experience" onclick="closeMobileNav()">Skills</a></li>
+      <li><a href="#projects" onclick="closeMobileNav()">Projects</a></li>
+      <li><a href="#contact" onclick="closeMobileNav()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
   <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assests/Profile-pic.png" alt="Jyothi profile picture" class="profile-img"/>
+    <div class="profile-img-wrap">
+      <img src="./assests/Profile-pic.png" alt="Jyothi C" class="profile-img"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+      <div class="profile-img-placeholder" style="display:none">👩‍💻</div>
     </div>
 
-    <div class="section__text">
-      <p class="section_text_p1">Hello, I'm</p>
-      <h1 class="title">Jyothi C</h1>
-      <p class="section_text_p2">Aspiring Python Full Stack Developer | MCA Student</p>
+    <div class="hero-text fade-up">
+      <div class="hero-badge">Available for opportunities</div>
+      <h1 class="hero-name">Hello, I'm<br><span>Jyothi C</span></h1>
+      <p class="hero-subtitle">Aspiring Python Full Stack Developer · MCA Student</p>
 
-      <div class="btn-container">
-        <button class="btn" onclick="window.open('./assests/Resume.pdf')">
+      <div class="btn-row">
+        <a href="./assests/Resume.pdf" class="btn btn-primary" download>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
           Download CV
-        </button>
-        <button class="btn btn-outline" onclick="location.href='#contact'">
-          Contact Me
-        </button>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
       </div>
 
-      <div id="socials-container">
-        <img src="./assests/linkedin.png" class="icon"
-          onclick="location.href='https://www.linkedin.com/in/jyothi-c-568036369/'"/>
-        <img src="./assests/github-light_.png" class="icon"
-          onclick="location.href='https://github.com/Jyothi-Chikkannegowda'"/>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/jyothi-c-568036369/" target="_blank" class="social-link" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="https://github.com/Jyothi-Chikkannegowda" target="_blank" class="social-link" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </a>
+        <a href="mailto:jyothicgowda.mys@gmail.com" class="social-link" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
- <section id="about">
-  <h2>About Me</h2>
+  <section id="about">
+    <p class="section-label">Who I am</p>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid fade-up">
+      <div class="about-text">
+        <p>I am a dedicated MCA student with a strong foundation in Python and Full Stack Web Development. As a fresher, I bring enthusiasm, adaptability, and a strong willingness to learn and grow in a professional environment.</p>
+        <p>I have hands-on experience in Python, Django, HTML, CSS, JavaScript, and MySQL through academic and personal projects. I focus on writing clean, efficient code and building responsive, user-friendly applications.</p>
+        <p>I am actively seeking an opportunity where I can contribute to real-world projects, enhance my technical expertise, and grow as a valuable software developer.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Projects built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">MCA</div>
+          <div class="stat-label">Degree pursuing</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Eager to learn</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    I am a dedicated MCA student with a strong foundation in Python and Full Stack Web Development. 
-    As a fresher, I bring enthusiasm, adaptability, and a strong willingness to learn and grow in a professional environment.
-  </p>
+  <!-- EDUCATION -->
+  <section id="education">
+    <p class="section-label">Academic background</p>
+    <h2 class="section-title">Education</h2>
+    <p class="section-desc">My academic journey that shaped my technical foundation.</p>
 
-  <p>
-    I have hands-on experience in Python, HTML, CSS, JavaScript, and MySQL through academic and personal projects. 
-    I focus on writing clean, efficient code and building responsive, user-friendly applications.
-  </p>
+    <!-- UPDATE: Fill in your actual college name, CGPA, and year -->
+    <div class="edu-card fade-up">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-info">
+        <h3>Master of Computer Applications (MCA)</h3>
+        <div class="institute">Maharaja Institute of Technology Mysore</div>
+        <div class="edu-meta">
+          <span class="edu-tag">2024 – 2026</span>
+          <span class="edu-tag">CGPA: 9.49 / 10</span>
+          <span class="edu-tag">Visvesvaraya Technological University</span>
+        </div>
+      </div>
+    </div>
 
-  <p>
-    I am actively seeking an opportunity where I can contribute to real-world projects, 
-    enhance my technical expertise, and grow as a valuable software developer.
-  </p>
-</section>
+    <div class="edu-card fade-up">
+      <div class="edu-icon">📘</div>
+      <div class="edu-info">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <div class="institute">JSS College for Women · Mysuru</div>
+        <div class="edu-meta">
+          <span class="edu-tag">2021 – 2024</span>
+          <span class="edu-tag">Percentage: 91.23%</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- SKILLS -->
   <section id="experience">
-    <h1 class="section-title">Technical Skills</h1>
+    <p class="section-label">What I know</p>
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-desc">Technologies and tools I work with to build full stack applications.</p>
 
-    <div class="card-container">
-      <div class="glass-card">
+    <div class="skills-grid fade-up">
+      <div class="skill-card">
+        <span class="skill-icon">🎨</span>
         <h3>Frontend</h3>
-        <p>HTML, CSS, JavaScript</p>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Responsive Design</span>
+        </div>
       </div>
 
-      <div class="glass-card">
+      <div class="skill-card">
+        <span class="skill-icon">🐍</span>
         <h3>Backend</h3>
-        <p>Python, Java, C</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">C</span>
+        </div>
       </div>
 
-      <div class="glass-card">
+      <div class="skill-card">
+        <span class="skill-icon">🗄️</span>
         <h3>Database</h3>
-        <p>MySQL</p>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">SQL Queries</span>
+          <span class="skill-tag">DB Design</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <span class="skill-icon">🛠️</span>
+        <h3>Tools & Others</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">Problem Solving</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
-    <h1 class="section-title">Projects</h1>
+    <p class="section-label">What I've built</p>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-desc">A selection of projects that demonstrate my skills and learning.</p>
 
-    <div class="card-container">
+    <div class="projects-grid fade-up">
 
-      <div class="glass-card project-card">
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-emoji">🎨</div>
+          <div class="project-links">
+            <a href="https://github.com/Jyothi-Chikkannegowda/Art-and-craft-management-system" target="_blank" class="project-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
         <h3>Art & Craft Management System</h3>
-        <p>Built using HTML, CSS, JavaScript & MySQL with admin dashboard.</p>
-        <button class="btn"
-          onclick="location.href='https://github.com/Jyothi-Chikkannegowda/Art-and-craft-management-system'">
-          GitHub
-        </button>
+        <p>A full-featured management system for art and craft inventory built with Django, featuring an admin dashboard for tracking products, orders, and users.</p>
+        <div class="project-tech">
+          <span class="tech-badge badge-blue">HTML</span>
+          <span class="tech-badge badge-purple">CSS</span>
+          <span class="tech-badge badge-green">JavaScript</span>
+          <span class="tech-badge badge-green">Django</span>
+          <span class="tech-badge badge-pink">SQL</span>
+        </div>
       </div>
 
-      <div class="glass-card project-card">
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-emoji">📋</div>
+          <div class="project-links">
+            <a href="https://github.com/Jyothi-Chikkannegowda/Complaint-submission-portal" target="_blank" class="project-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
         <h3>Complaint Submission Portal</h3>
-        <p>Full stack complaint management system with user authentication.</p>
-        <button class="btn"
-          onclick="location.href='https://github.com/Jyothi-Chikkannegowda/Complaint-submission-portal'">
-          GitHub
-        </button>
+        <p>Full stack complaint management system with user authentication, complaint tracking, and admin resolution dashboard.</p>
+        <div class="project-tech">
+          <span class="tech-badge badge-blue">HTML</span>
+          <span class="tech-badge badge-purple">CSS</span>
+          <span class="tech-badge badge-green">JavaScript</span>
+          <span class="tech-badge badge-pink">MySQL</span>
+        </div>
       </div>
 
-      <div class="glass-card project-card">
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-emoji">💼</div>
+          <div class="project-links">
+            <a href="https://github.com/Jyothi-Chikkannegowda/FUTURE_FS_01" target="_blank" class="project-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
         <h3>Portfolio Website</h3>
-        <p>Responsive modern personal portfolio with glassmorphism design.</p>
-        <button class="btn"
-          onclick="location.href='https://github.com/Jyothi-Chikkannegowda/FUTURE_FS_01'">
-          GitHub
-        </button>
+        <p>This responsive modern personal portfolio built with glassmorphism design, smooth animations, and fully mobile-responsive layout.</p>
+        <div class="project-tech">
+          <span class="tech-badge badge-blue">HTML</span>
+          <span class="tech-badge badge-purple">CSS</span>
+          <span class="tech-badge badge-green">JavaScript</span>
+        </div>
       </div>
 
     </div>
   </section>
 
   <!-- CONTACT -->
-<section id="contact">
-  <h1 class="section-title">Contact Me</h1>
+  <section id="contact">
+    <p class="section-label">Get in touch</p>
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-desc">Open to internship and fresher opportunities. Feel free to reach out!</p>
 
-  <div class="glass-card contact-card">
-    <p>
-      Email:
-      <a href="mailto:jyothicgowda.mys@gmail.com">
-        jyothicgowda.mys@gmail.com
-      </a>
-    </p>
+    <div class="contact-wrapper fade-up">
+      <div class="contact-card">
+        <h3>Let's work together 🚀</h3>
+        <p>I'm currently looking for my first professional role as a Python Full Stack Developer. Whether you have a question or just want to say hi, my inbox is always open!</p>
 
-    <p>
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/jyothi-c-568036369/" target="_blank">
-        Jyothi C
-      </a>
-    </p>
-  </div>
-</section>
+        <div class="contact-links">
+          <a href="mailto:jyothicgowda.mys@gmail.com" class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <span>jyothicgowda.mys@gmail.com</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/jyothi-c-568036369/" target="_blank" class="contact-item">
+            <div class="contact-item-icon">💼</div>
+            <span>linkedin.com/in/jyothi-c-568036369</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://github.com/Jyothi-Chikkannegowda" target="_blank" class="contact-item">
+            <div class="contact-item-icon">🐙</div>
+            <span>github.com/Jyothi-Chikkannegowda</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
 
+        <a href="mailto:jyothicgowda.mys@gmail.com" class="btn btn-primary" style="display:inline-flex">
+          Send me an email ✉️
+        </a>
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Jyothi C | Full Stack Developer</p>
+    <p>Designed & Built by <a href="#profile">Jyothi C</a> · © 2026</p>
   </footer>
 
   <script src="script.js"></script>
