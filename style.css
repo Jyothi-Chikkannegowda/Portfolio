@@ -233,19 +233,19 @@ section {
 
 .profile-img {
     width: 100%;
-    height: auto;
-    min-height: 100%;
-    position: relative;
-    top: 20px;   /* increase/decrease */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+
+    transform: translateY(25px);   /* Adjust this value */
 }
 .profile-img-wrap {
     width: 260px;
     height: 260px;
-    border-radius: 50%;
     overflow: hidden;
+    border-radius: 50%;
     position: relative;
-    flex-shrink: 0;
-    margin-top: 40px;   /* Increase if needed */
 }
 
 .profile-img-placeholder {
