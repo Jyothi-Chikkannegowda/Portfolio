@@ -236,7 +236,7 @@ section {
     height: auto;
     min-height: 100%;
     position: relative;
-    top: -15px;   /* Move image upward */
+    top: -13px;   /* Move image upward */
 }
 .profile-img-wrap {
     width: 260px;
