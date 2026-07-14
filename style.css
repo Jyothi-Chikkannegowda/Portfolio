@@ -238,7 +238,7 @@ section {
     border-radius: 50%;
     display: block;
 
-    transform: translateY(20px);   /* Adjust this value */
+    transform: translateY(30px);   /* Adjust this value */
 }
 .profile-img-wrap {
     width: 260px;
