@@ -236,7 +236,7 @@ section {
     height: auto;
     min-height: 100%;
     position: relative;
-    top: 20px;   /* increase/decrease */
+    top: 40px;   /* increase/decrease */
 }
 .profile-img-wrap {
     width: 260px;
