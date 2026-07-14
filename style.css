@@ -233,10 +233,10 @@ section {
 
 .profile-img {
     width: 100%;
-    height: auto;
-    min-height: 100%;
-    position: relative;
-    top: 40px;   /* increase/decrease */
+    height: 115%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
 }
 .profile-img-wrap {
     width: 260px;
