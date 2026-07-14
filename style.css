@@ -235,10 +235,9 @@ section {
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  object-fit: cover;
-   object-position: center 40%;
+  object-fit: contain;
+  background: #000;
   border: 4px solid var(--bg);
-  display: block;
 }
 .profile-img-wrap {
   position: relative;
