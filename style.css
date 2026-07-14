@@ -236,7 +236,7 @@ section {
     height: auto;
     min-height: 100%;
     position: relative;
-    top: 40px;   /* increase/decrease */
+    top: 50px;   /* increase/decrease */
 }
 .profile-img-wrap {
     width: 260px;
@@ -245,7 +245,7 @@ section {
     overflow: hidden;
     position: relative;
     flex-shrink: 0;
-    margin-top: 40px;   /* Increase if needed */
+    margin-top: 50px;   /* Increase if needed */
 }
 
 .profile-img-placeholder {
